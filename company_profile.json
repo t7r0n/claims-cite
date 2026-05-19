@@ -1,0 +1,55 @@
+{
+  "company": "Solva",
+  "company_slug": "solva",
+  "repo": "claims-cite",
+  "package": "claims_cite",
+  "cli": "claims-cite",
+  "title": "Claims Cite",
+  "problem": "Solva's wedge is \"every recommendation is source cited from the claim/policy documents\" - i.e., they're betting that citations are the trust primitive insurers buy on. But the public artifact that proves the citations are load bearing under adversarial conditions does not exist. Concretely: when a Solva agent says \"this claim violates Section 7.",
+  "direction": "A reproducible benchmark + verification toolkit that scores any claims handling AI on citation faithfulness under adversarial document perturbations, designed to be the artifact a carrier procurement team can run before signing Solva.",
+  "why": "Herman scaled Zaver under bank regulation; Sorena ran InsurTech at Citi; Linus shipped regulated AI. Their first instinct on any product decision is \"does this stand up to a regulator's audit?\" claims cite is the audit artifact made portable. It will land emotionally as well as technically.",
+  "terms": [
+    "solva",
+    "wedge",
+    "every",
+    "recommendation",
+    "source",
+    "cited",
+    "claim",
+    "policy",
+    "documents",
+    "betting",
+    "citations",
+    "trust",
+    "primitive",
+    "insurers",
+    "public",
+    "artifact",
+    "proves",
+    "bearing"
+  ],
+  "metrics": [
+    "solva_coverage",
+    "wedge_risk",
+    "every_precision",
+    "recommendation_latency"
+  ],
+  "failure_modes": [
+    "solva_drift",
+    "wedge_gap",
+    "every_misroute",
+    "recommendation_blindspot"
+  ],
+  "sources": [
+    "https://www.solvatechnology.com/about-us",
+    "https://www.ycombinator.com/companies/solva",
+    "https://www.ycombinator.com/launches/O7o-solva-harvey-for-insurance",
+    "https://www.ycombinator.com/companies/solva/jobs/V9X1F0T-founding-engineer",
+    "https://www.linkedin.com/posts/y-combinator_solva-automates-insurance-claims-with-secure-activity-7358572547300364308-9L0I",
+    "https://www.linkedin.com/in/sorenaamini/",
+    "https://coverager.com/company/solva/",
+    "https://huggingface.co/BAAI/bge-reranker-v2-m3",
+    "https://huggingface.co/microsoft/deberta-v3-base-mnli"
+  ],
+  "github_url": "https://github.com/t7r0n/claims-cite"
+}
