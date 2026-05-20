@@ -1,0 +1,69 @@
+{
+  "company": "Solva",
+  "repo": "claims-cite",
+  "terms": [
+    "solva",
+    "wedge",
+    "recommendation",
+    "source",
+    "cited",
+    "claim",
+    "policy",
+    "documents"
+  ],
+  "metrics": [
+    "solva_coverage",
+    "wedge_risk",
+    "recommendation_precision",
+    "source_latency"
+  ],
+  "failure_modes": [
+    "solva_drift",
+    "wedge_gap",
+    "recommendation_misroute",
+    "source_blindspot"
+  ],
+  "evidence_density": 17.75,
+  "pressure_index": 0.3167,
+  "blocked_share": 0.0972,
+  "review_share": 0.1319,
+  "top_leverage_points": [
+    {
+      "rank": 1,
+      "scenario": "solva evidence replay",
+      "metric": "solva_coverage",
+      "failure_mode": "solva_drift",
+      "evidence": "ev_0132",
+      "operator_action": "block release until cited evidence is regenerated",
+      "severity": 2.611
+    },
+    {
+      "rank": 2,
+      "scenario": "source operator packet",
+      "metric": "wedge_risk",
+      "failure_mode": "wedge_gap",
+      "evidence": "ev_0055",
+      "operator_action": "accept only if decision claims cite fixture evidence",
+      "severity": 2.556
+    },
+    {
+      "rank": 3,
+      "scenario": "recommendation regression harness",
+      "metric": "recommendation_precision",
+      "failure_mode": "recommendation_misroute",
+      "evidence": "ev_0066",
+      "operator_action": "open a regression issue with trace and benchmark delta",
+      "severity": 2.528
+    },
+    {
+      "rank": 4,
+      "scenario": "wedge boundary probe",
+      "metric": "source_latency",
+      "failure_mode": "source_blindspot",
+      "evidence": "ev_0077",
+      "operator_action": "route to reviewer with evidence packet",
+      "severity": 2.528
+    }
+  ],
+  "readout": "Solva gets a local, deterministic pressure test around solva, wedge, and recommendation. The useful part is not the dashboard; it is the repeatable evidence path from fixture to failure to operator action."
+}

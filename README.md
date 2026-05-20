@@ -2,19 +2,39 @@
 
 A reproducible benchmark + verification toolkit that scores any claims handling AI on citation faithfulness under adversarial document perturbations, designed to be the artifact a carrier procurement team can run before signing Solva.
 
-## Why This Exists
+![Claims Cite working dashboard](outputs/project_working.svg)
 
-Solva's wedge is "every recommendation is source cited from the claim/policy documents" - i.e., they're betting that citations are the trust primitive insurers buy on. But the public artifact that proves the citations are load bearing under adversarial conditions does not exist. Concretely: when a Solva agent says "this claim violates Section 7.
+## Why it exists
 
-## What It Builds
+Solva's wedge is "every recommendation is source cited from the claim/policy documents" - i.e., they're betting that citations are the trust primitive insurers buy on.
 
-- Replays synthetic `solva` and `wedge` cases against the project's evidence rules.
-- Scores `solva_coverage`, `wedge_risk`, and `recommendation_precision` so regressions are visible in CSV and JSON.
-- Plants `solva drift` and `wedge gap` failures as negative controls.
-- Writes citation-locked decision claims; unsupported claims fail verification.
-- Exports a review dashboard and demo pack for `claims-cite` without hosted services.
+Most internal demos stop at a pretty chart. This repository is built around the harder part: a repeatable path from fixture, to failure, to evidence, to the operator action a serious team would actually trust.
 
-## Local Run
+## What is inside
+
+- A deterministic replay harness tuned around solva, wedge, and recommendation.
+- Company-specific strategy code in `src/claims_cite/strategy.py`, not just README-level customization.
+- Citation-locked reports where every decision claim has to point back to a generated evidence ID.
+- Two visual artifacts generated from the latest run: `outputs/project_working.svg` and `outputs/evidence_map.svg`.
+- A portable demo pack with JSON, CSV, Markdown, HTML, SVG, and benchmark artifacts.
+
+![Claims Cite evidence map](outputs/evidence_map.svg)
+
+## Signals it measures
+
+- `solva coverage`
+- `wedge risk`
+- `recommendation precision`
+- `source latency`
+
+## Failure modes it plants
+
+- solva drift
+- wedge gap
+- recommendation misroute
+- source blindspot
+
+## Run it locally
 
 ```bash
 uv sync
@@ -23,16 +43,14 @@ uv run pytest -q
 uv run ruff check .
 ```
 
-## Outputs
+## Outputs worth opening
 
-- `outputs/analysis.json`
-- `outputs/scenario_report.csv`
-- `outputs/decision_report.md`
-- `outputs/evidence_packet.md`
-- `outputs/domain_rubric.json`
-- `outputs/failure_matrix.md`
-- `outputs/trace_graph.mmd`
 - `outputs/dashboard.html`
+- `outputs/project_working.svg`
+- `outputs/evidence_map.svg`
+- `outputs/operator_brief.md`
+- `outputs/decision_report.md`
+- `outputs/strategy_model.json`
 - `outputs/demo_pack.zip`
 
 ## Sources
@@ -49,4 +67,4 @@ uv run ruff check .
 
 ## Boundary
 
-This repository uses synthetic fixtures only. It has no credentials, no customer data, no outreach data, and no dependency on a hosted API.
+Everything runs locally against synthetic fixtures. There are no credentials, no customer records, no outreach files, and no hosted API dependency.
