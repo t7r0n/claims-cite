@@ -5,7 +5,7 @@
   "package": "claims_cite",
   "cli": "claims-cite",
   "title": "Claims Cite",
-  "problem": "Solva's wedge is \"every recommendation is source cited from the claim/policy documents\" - i.e., they're betting that citations are the trust primitive insurers buy on. But the public artifact that proves the citations are load bearing under adversarial conditions does not exist. Concretely: when a Solva agent says \"this claim violates Section 7.",
+  "problem": "Solva's wedge is \"every recommendation is source cited from the claim/policy documents\" \u2014 i.e., they're betting that citations are the trust primitive insurers buy on. But the public artifact that proves the citations are load bearing under adversarial conditions does not exist. Concretely: when a Solva agent says \"this claim violates Section 7.",
   "direction": "A reproducible benchmark + verification toolkit that scores any claims handling AI on citation faithfulness under adversarial document perturbations, designed to be the artifact a carrier procurement team can run before signing Solva.",
   "why": "Herman scaled Zaver under bank regulation; Sorena ran InsurTech at Citi; Linus shipped regulated AI. Their first instinct on any product decision is \"does this stand up to a regulator's audit?\" claims cite is the audit artifact made portable. It will land emotionally as well as technically.",
   "terms": [
