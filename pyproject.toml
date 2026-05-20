@@ -1,7 +1,7 @@
 [project]
 name = "claims-cite"
 version = "0.1.0"
-description = "A reproducible benchmark + verification toolkit that scores any claims handling AI on citation faithfulness under adversarial document pertu"
+description = "A reproducible benchmark + verification toolkit that scores any claims handling AI on citation faithfulness under advers"
 readme = "README.md"
 requires-python = ">=3.12"
 authors = [

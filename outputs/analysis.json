@@ -1,5 +1,5 @@
 {
-  "company": "Solva",
+  "company": "Claims Cite",
   "repo": "claims-cite",
   "cases": 144,
   "status_counts": {
@@ -9,54 +9,54 @@
   },
   "clusters": [
     {
-      "scenario": "recommendation regression harness",
+      "scenario": "claim regression harness",
       "cases": 36,
       "blocks": 3,
       "reviews": 5,
       "mean_severity": 2.528,
-      "mean_score": 0.4058,
-      "top_evidence_id": "ev_0066",
+      "mean_score": 0.3824,
+      "top_evidence_id": "ev_0110",
       "recommended_action": "open a regression issue with trace and benchmark delta"
     },
     {
-      "scenario": "solva evidence replay",
+      "scenario": "evidence replay",
       "cases": 36,
       "blocks": 4,
       "reviews": 5,
       "mean_severity": 2.611,
-      "mean_score": 0.4149,
-      "top_evidence_id": "ev_0132",
+      "mean_score": 0.4026,
+      "top_evidence_id": "ev_0000",
       "recommended_action": "block release until cited evidence is regenerated"
     },
     {
-      "scenario": "source operator packet",
-      "cases": 36,
-      "blocks": 4,
-      "reviews": 5,
-      "mean_severity": 2.556,
-      "mean_score": 0.4178,
-      "top_evidence_id": "ev_0055",
-      "recommended_action": "accept only if decision claims cite fixture evidence"
-    },
-    {
-      "scenario": "wedge boundary probe",
+      "scenario": "handoff boundary probe",
       "cases": 36,
       "blocks": 3,
       "reviews": 4,
       "mean_severity": 2.528,
-      "mean_score": 0.387,
+      "mean_score": 0.4002,
       "top_evidence_id": "ev_0077",
       "recommended_action": "route to reviewer with evidence packet"
+    },
+    {
+      "scenario": "review operator packet",
+      "cases": 36,
+      "blocks": 4,
+      "reviews": 5,
+      "mean_severity": 2.556,
+      "mean_score": 0.3971,
+      "top_evidence_id": "ev_0011",
+      "recommended_action": "accept only if decision claims cite fixture evidence"
     }
   ],
   "highest_risk": {
-    "scenario": "solva evidence replay",
+    "scenario": "evidence replay",
     "cases": 36,
     "blocks": 4,
     "reviews": 5,
     "mean_severity": 2.611,
-    "mean_score": 0.4149,
-    "top_evidence_id": "ev_0132",
+    "mean_score": 0.4026,
+    "top_evidence_id": "ev_0000",
     "recommended_action": "block release until cited evidence is regenerated"
   }
 }

@@ -1,67 +1,57 @@
 {
   "repo": "claims-cite",
-  "company": "Solva",
+  "company": "Claims Cite",
   "rubric_axes": [
     {
-      "axis": "solva_coverage",
+      "axis": "evidence_coverage",
       "failures": [
-        "solva_drift"
+        "evidence_drift"
       ],
       "evidence_required": true
     },
     {
-      "axis": "wedge_risk",
+      "axis": "handoff_risk",
       "failures": [
-        "wedge_gap"
+        "handoff_gap"
       ],
       "evidence_required": true
     },
     {
-      "axis": "recommendation_precision",
+      "axis": "claim_precision",
       "failures": [
-        "recommendation_misroute"
+        "claim_misroute"
       ],
       "evidence_required": true
     },
     {
-      "axis": "source_latency",
+      "axis": "review_latency",
       "failures": [
-        "source_blindspot"
+        "review_blindspot"
       ],
       "evidence_required": true
     }
   ],
   "archetypes": [
     {
-      "name": "solva evidence replay",
-      "trigger": "solva signal changes while wedge context is stale",
+      "name": "evidence replay",
+      "trigger": "source evidence changes while workflow context is stale",
       "expected": "block release until cited evidence is regenerated"
     },
     {
-      "name": "wedge boundary probe",
-      "trigger": "wedge handoff crosses a policy or trust boundary",
+      "name": "handoff boundary probe",
+      "trigger": "handoff crosses a policy or trust boundary",
       "expected": "route to reviewer with evidence packet"
     },
     {
-      "name": "recommendation regression harness",
-      "trigger": "recommendation behavior regresses against the last accepted fixture",
+      "name": "claim regression harness",
+      "trigger": "claim behavior regresses against the last accepted fixture",
       "expected": "open a regression issue with trace and benchmark delta"
     },
     {
-      "name": "source operator packet",
-      "trigger": "source output needs a human-readable audit packet",
+      "name": "review operator packet",
+      "trigger": "review output needs a human-readable audit packet",
       "expected": "accept only if decision claims cite fixture evidence"
     }
   ],
-  "sources_used": [
-    "https://www.solvatechnology.com/about-us",
-    "https://www.ycombinator.com/companies/solva",
-    "https://www.ycombinator.com/launches/O7o-solva-harvey-for-insurance",
-    "https://www.ycombinator.com/companies/solva/jobs/V9X1F0T-founding-engineer",
-    "https://www.linkedin.com/posts/y-combinator_solva-automates-insurance-claims-with-secure-activity-7358572547300364308-9L0I",
-    "https://www.linkedin.com/in/sorenaamini/",
-    "https://coverager.com/company/solva/",
-    "https://huggingface.co/BAAI/bge-reranker-v2-m3",
-    "https://huggingface.co/microsoft/deberta-v3-base-mnli"
-  ]
+  "sources_used": []
 }
