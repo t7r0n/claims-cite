@@ -11,7 +11,6 @@
   "terms": [
     "solva",
     "wedge",
-    "every",
     "recommendation",
     "source",
     "cited",
@@ -23,22 +22,45 @@
     "trust",
     "primitive",
     "insurers",
-    "public",
     "artifact",
     "proves",
-    "bearing"
+    "bearing",
+    "under",
+    "adversarial"
   ],
   "metrics": [
     "solva_coverage",
     "wedge_risk",
-    "every_precision",
-    "recommendation_latency"
+    "recommendation_precision",
+    "source_latency"
   ],
   "failure_modes": [
     "solva_drift",
     "wedge_gap",
-    "every_misroute",
-    "recommendation_blindspot"
+    "recommendation_misroute",
+    "source_blindspot"
+  ],
+  "archetypes": [
+    {
+      "name": "solva evidence replay",
+      "trigger": "solva signal changes while wedge context is stale",
+      "expected": "block release until cited evidence is regenerated"
+    },
+    {
+      "name": "wedge boundary probe",
+      "trigger": "wedge handoff crosses a policy or trust boundary",
+      "expected": "route to reviewer with evidence packet"
+    },
+    {
+      "name": "recommendation regression harness",
+      "trigger": "recommendation behavior regresses against the last accepted fixture",
+      "expected": "open a regression issue with trace and benchmark delta"
+    },
+    {
+      "name": "source operator packet",
+      "trigger": "source output needs a human-readable audit packet",
+      "expected": "accept only if decision claims cite fixture evidence"
+    }
   ],
   "sources": [
     "https://www.solvatechnology.com/about-us",
